@@ -1,0 +1,289 @@
+[debug] [2023-04-04T11:26:11.805Z] ----------------------------------------------------------------------
+[debug] [2023-04-04T11:26:11.807Z] Command:       C:\Users\Home\DOWNLO~1\firebase-tools-instant-win.exe C:\Users\Home\.cache\firebase\tools\lib\node_modules\firebase-tools\lib\bin\firebase deploy
+[debug] [2023-04-04T11:26:11.807Z] CLI Version:   11.25.2
+[debug] [2023-04-04T11:26:11.807Z] Platform:      win32
+[debug] [2023-04-04T11:26:11.807Z] Node Version:  v16.16.0
+[debug] [2023-04-04T11:26:11.808Z] Time:          Tue Apr 04 2023 14:26:11 GMT+0300 (Israel Daylight Time)
+[debug] [2023-04-04T11:26:11.809Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-04-04T11:26:11.904Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-04-04T11:26:11.904Z] > authorizing via signed-in user (tomerir5@gmail.com)
+[debug] [2023-04-04T11:26:11.904Z] [iam] checking project chat-4f7ea for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-04-04T11:26:11.907Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-4f7ea:testIamPermissions [none]
+[debug] [2023-04-04T11:26:11.908Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-4f7ea:testIamPermissions x-goog-quota-user=projects/chat-4f7ea
+[debug] [2023-04-04T11:26:11.908Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-4f7ea:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-04-04T11:26:12.805Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-4f7ea:testIamPermissions 200
+[debug] [2023-04-04T11:26:12.806Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-4f7ea:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-04-04T11:26:12.807Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/chat-4f7ea [none]
+[debug] [2023-04-04T11:26:13.243Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/chat-4f7ea 200
+[debug] [2023-04-04T11:26:13.243Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/chat-4f7ea {"projectId":"chat-4f7ea","projectNumber":"477069411521","displayName":"chat","name":"projects/chat-4f7ea","resources":{"hostingSite":"chat-4f7ea"},"state":"ACTIVE","etag":"1_ed9732b9-bfd9-4126-b1bf-15bc114958dd"}
+[debug] [2023-04-04T11:26:16.307Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/chat-4f7ea/sites pageToken=&pageSize=10
+[debug] [2023-04-04T11:26:17.398Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/chat-4f7ea/sites 200
+[debug] [2023-04-04T11:26:17.398Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/chat-4f7ea/sites {"sites":[{"name":"projects/chat-4f7ea/sites/chat-4f7ea","defaultUrl":"https://chat-4f7ea.web.app","appId":"1:477069411521:web:cebab7edcfd12d51064040","type":"DEFAULT_SITE"}]}
+[debug] [2023-04-04T11:26:17.399Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:477069411521:web:cebab7edcfd12d51064040/config [none]
+[debug] [2023-04-04T11:26:18.409Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:477069411521:web:cebab7edcfd12d51064040/config 200
+[debug] [2023-04-04T11:26:18.409Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:477069411521:web:cebab7edcfd12d51064040/config {"projectId":"chat-4f7ea","appId":"1:477069411521:web:cebab7edcfd12d51064040","storageBucket":"chat-4f7ea.appspot.com","apiKey":"AIzaSyBPh4jflxFyc1i0f14YmsYpd9rL_GQNFtU","authDomain":"chat-4f7ea.firebaseapp.com","messagingSenderId":"477069411521","measurementId":"G-T2P1HF2HXR"}
+[info] 
+[info] === Deploying to 'chat-4f7ea'...
+[info] 
+[info] i  deploying functions, hosting 
+[debug] [2023-04-04T11:26:44.756Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/chat-4f7ea [none]
+[debug] [2023-04-04T11:26:45.126Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/chat-4f7ea 200
+[debug] [2023-04-04T11:26:45.126Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/chat-4f7ea {"projectId":"chat-4f7ea","projectNumber":"477069411521","displayName":"chat","name":"projects/chat-4f7ea","resources":{"hostingSite":"chat-4f7ea"},"state":"ACTIVE","etag":"1_ed9732b9-bfd9-4126-b1bf-15bc114958dd"}
+[info] i  functions: preparing codebase firebase-frameworks-chat-4f7ea for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2023-04-04T11:26:45.129Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chat-4f7ea/services/cloudfunctions.googleapis.com [none]
+[debug] [2023-04-04T11:26:45.129Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/chat-4f7ea/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/chat-4f7ea
+[debug] [2023-04-04T11:26:45.130Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chat-4f7ea/services/runtimeconfig.googleapis.com [none]
+[debug] [2023-04-04T11:26:45.130Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/chat-4f7ea/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/chat-4f7ea
+[debug] [2023-04-04T11:26:45.131Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chat-4f7ea/services/cloudbuild.googleapis.com [none]
+[debug] [2023-04-04T11:26:45.131Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/chat-4f7ea/services/cloudbuild.googleapis.com x-goog-quota-user=projects/chat-4f7ea
+[debug] [2023-04-04T11:26:45.132Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chat-4f7ea/services/artifactregistry.googleapis.com [none]
+[debug] [2023-04-04T11:26:45.132Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/chat-4f7ea/services/artifactregistry.googleapis.com x-goog-quota-user=projects/chat-4f7ea
+[debug] [2023-04-04T11:26:46.158Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chat-4f7ea/services/cloudfunctions.googleapis.com 200
+[debug] [2023-04-04T11:26:46.158Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chat-4f7ea/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2023-04-04T11:26:46.182Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chat-4f7ea/services/runtimeconfig.googleapis.com 200
+[debug] [2023-04-04T11:26:46.182Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chat-4f7ea/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2023-04-04T11:26:46.189Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chat-4f7ea/services/cloudbuild.googleapis.com 200
+[debug] [2023-04-04T11:26:46.189Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chat-4f7ea/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2023-04-04T11:26:46.200Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chat-4f7ea/services/artifactregistry.googleapis.com 200
+[debug] [2023-04-04T11:26:46.200Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chat-4f7ea/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2023-04-04T11:26:46.201Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/chat-4f7ea/adminSdkConfig [none]
+[debug] [2023-04-04T11:26:46.611Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/chat-4f7ea/adminSdkConfig 200
+[debug] [2023-04-04T11:26:46.611Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/chat-4f7ea/adminSdkConfig {"projectId":"chat-4f7ea","storageBucket":"chat-4f7ea.appspot.com"}
+[debug] [2023-04-04T11:26:46.612Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/chat-4f7ea/configs [none]
+[debug] [2023-04-04T11:26:47.096Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/chat-4f7ea/configs 200
+[debug] [2023-04-04T11:26:47.096Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/chat-4f7ea/configs {}
+[debug] [2023-04-04T11:26:47.098Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] !  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2023-04-04T11:26:47.876Z] > [functions] package.json contents: {
+  "name": "chat",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@fontsource/public-sans": "^4.5.12",
+    "@mui/joy": "^5.0.0-alpha.73",
+    "@mui/material": "^5.11.15",
+    "@types/node": "18.15.11",
+    "@types/react": "18.0.32",
+    "@types/react-dom": "18.0.11",
+    "eslint": "8.37.0",
+    "eslint-config-next": "13.2.4",
+    "firebase": "^9.19.1",
+    "next": "13.2.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "socket.io-client": "^4.6.1",
+    "typescript": "5.0.3",
+    "uuid": "^9.0.0",
+    "firebase-frameworks": "^0.6.0",
+    "firebase-functions": "^3.23.0",
+    "firebase-admin": "^11.0.1"
+  },
+  "main": "server.js",
+  "engines": {
+    "node": "16"
+  }
+}
+[debug] [2023-04-04T11:26:47.876Z] Building nodejs source
+[debug] [2023-04-04T11:26:47.877Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-04-04T11:26:47.888Z] Found firebase-functions binary at 'C:\Users\Home\Desktop\chat\chat\.firebase\chat-4f7ea\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-04-04T11:26:48.344Z] Serving at port 8398
+
+[debug] [2023-04-04T11:26:48.392Z] Got response from /__/functions.yaml {"endpoints":{"ssrchat4f7ea":{"platform":"gcfv2","region":["europe-west1"],"labels":{},"httpsTrigger":{},"entryPoint":"ssrchat4f7ea"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-04-04T11:26:48.401Z] shutdown requested via /__/quitquitquit
+
+[info] i  functions: Loaded environment variables from .env. 
+[info] i  functions: preparing .firebase\chat-4f7ea\functions directory for uploading... 
+[info] i  functions: packaged C:\Users\Home\Desktop\chat\chat\.firebase\chat-4f7ea\functions (43.12 MB) for uploading 
+[debug] [2023-04-04T11:26:51.346Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/chat-4f7ea/locations/-/functions [none]
+[debug] [2023-04-04T11:26:52.014Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/chat-4f7ea/locations/-/functions 200
+[debug] [2023-04-04T11:26:52.014Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/chat-4f7ea/locations/-/functions {}
+[debug] [2023-04-04T11:26:52.014Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/chat-4f7ea/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2023-04-04T11:26:53.197Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/chat-4f7ea/locations/-/functions 200
+[debug] [2023-04-04T11:26:53.197Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/chat-4f7ea/locations/-/functions {}
+[info] i  functions: ensuring required API run.googleapis.com is enabled... 
+[info] i  functions: ensuring required API eventarc.googleapis.com is enabled... 
+[info] i  functions: ensuring required API pubsub.googleapis.com is enabled... 
+[info] i  functions: ensuring required API storage.googleapis.com is enabled... 
+[debug] [2023-04-04T11:26:53.201Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chat-4f7ea/services/run.googleapis.com [none]
+[debug] [2023-04-04T11:26:53.201Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/chat-4f7ea/services/run.googleapis.com x-goog-quota-user=projects/chat-4f7ea
+[debug] [2023-04-04T11:26:53.201Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chat-4f7ea/services/eventarc.googleapis.com [none]
+[debug] [2023-04-04T11:26:53.202Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/chat-4f7ea/services/eventarc.googleapis.com x-goog-quota-user=projects/chat-4f7ea
+[debug] [2023-04-04T11:26:53.202Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chat-4f7ea/services/pubsub.googleapis.com [none]
+[debug] [2023-04-04T11:26:53.202Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/chat-4f7ea/services/pubsub.googleapis.com x-goog-quota-user=projects/chat-4f7ea
+[debug] [2023-04-04T11:26:53.203Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chat-4f7ea/services/storage.googleapis.com [none]
+[debug] [2023-04-04T11:26:53.203Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/chat-4f7ea/services/storage.googleapis.com x-goog-quota-user=projects/chat-4f7ea
+[debug] [2023-04-04T11:26:54.250Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chat-4f7ea/services/storage.googleapis.com 200
+[debug] [2023-04-04T11:26:54.250Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chat-4f7ea/services/storage.googleapis.com [omitted]
+[info] +  functions: required API storage.googleapis.com is enabled 
+[debug] [2023-04-04T11:26:54.265Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chat-4f7ea/services/pubsub.googleapis.com 200
+[debug] [2023-04-04T11:26:54.265Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chat-4f7ea/services/pubsub.googleapis.com [omitted]
+[info] +  functions: required API pubsub.googleapis.com is enabled 
+[debug] [2023-04-04T11:26:54.266Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chat-4f7ea/services/eventarc.googleapis.com 200
+[debug] [2023-04-04T11:26:54.266Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chat-4f7ea/services/eventarc.googleapis.com [omitted]
+[info] +  functions: required API eventarc.googleapis.com is enabled 
+[debug] [2023-04-04T11:26:54.266Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chat-4f7ea/services/run.googleapis.com 200
+[debug] [2023-04-04T11:26:54.266Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chat-4f7ea/services/run.googleapis.com [omitted]
+[info] +  functions: required API run.googleapis.com is enabled 
+[info] i  functions: generating the service identity for pubsub.googleapis.com... 
+[info] i  functions: generating the service identity for eventarc.googleapis.com... 
+[debug] [2023-04-04T11:26:54.268Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/477069411521/services/pubsub.googleapis.com:generateServiceIdentity [none]
+[debug] [2023-04-04T11:26:54.269Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/477069411521/services/eventarc.googleapis.com:generateServiceIdentity [none]
+[debug] [2023-04-04T11:26:55.386Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/477069411521/services/pubsub.googleapis.com:generateServiceIdentity 200
+[debug] [2023-04-04T11:26:55.387Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/477069411521/services/pubsub.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-477069411521@gcp-sa-pubsub.iam.gserviceaccount.com","uniqueId":"105231123267934343613"}}
+[debug] [2023-04-04T11:26:55.422Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/477069411521/services/eventarc.googleapis.com:generateServiceIdentity 200
+[debug] [2023-04-04T11:26:55.422Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/477069411521/services/eventarc.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-477069411521@gcp-sa-eventarc.iam.gserviceaccount.com","uniqueId":"112405953458763406707"}}
+[debug] [2023-04-04T11:26:55.423Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/chat-4f7ea [none]
+[debug] [2023-04-04T11:26:55.797Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/chat-4f7ea 200
+[debug] [2023-04-04T11:26:55.797Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/chat-4f7ea {"projectId":"chat-4f7ea","projectNumber":"477069411521","displayName":"chat","name":"projects/chat-4f7ea","resources":{"hostingSite":"chat-4f7ea"},"state":"ACTIVE","etag":"1_ed9732b9-bfd9-4126-b1bf-15bc114958dd"}
+[debug] [2023-04-04T11:26:55.798Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/chat-4f7ea/versions [none]
+[debug] [2023-04-04T11:26:55.798Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/chat-4f7ea/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase","firebase-web-framework":"next_ssr"}}
+[debug] [2023-04-04T11:26:57.057Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/chat-4f7ea/versions 200
+[debug] [2023-04-04T11:26:57.057Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/chat-4f7ea/versions {"name":"projects/477069411521/sites/chat-4f7ea/versions/22a4a94e31dde3ad","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase","firebase-web-framework":"next_ssr"}}
+[debug] [2023-04-04T11:26:57.057Z] [functions] found 1 new HTTP functions, testing setIamPolicy permission...
+[debug] [2023-04-04T11:26:57.058Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-4f7ea:testIamPermissions [none]
+[debug] [2023-04-04T11:26:57.058Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-4f7ea:testIamPermissions x-goog-quota-user=projects/chat-4f7ea
+[debug] [2023-04-04T11:26:57.058Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-4f7ea:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2023-04-04T11:26:57.399Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-4f7ea:testIamPermissions 200
+[debug] [2023-04-04T11:26:57.399Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-4f7ea:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2023-04-04T11:26:57.399Z] [functions] found setIamPolicy permission, proceeding with deploy
+[debug] [2023-04-04T11:26:57.400Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/chat-4f7ea/locations/europe-west1/functions:generateUploadUrl [none]
+[debug] [2023-04-04T11:26:57.756Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/chat-4f7ea/locations/europe-west1/functions:generateUploadUrl 200
+[debug] [2023-04-04T11:26:57.756Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/chat-4f7ea/locations/europe-west1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/gcf-v2-uploads-477069411521-europe-west1/73a43129-06e9-43ec-a40e-e515ffa8353e.zip?GoogleAccessId=service-477069411521@gcf-admin-robot.iam.gserviceaccount.com&Expires=1680609412&Signature=W2Dyt95cge5IzDUNS6OVj0qrZGH7G5tp%2BR3JDYYkjaS%2BBuF5X6KJ7c3HSmXhEHNnnvWrFiGSj2WKQv2x85MvG9JyKE%2FSHqKgkR100o74TNLlD88QsFeIHjD9teqY4C1Yq4u%2FGBecN27Nb65BQoUnC%2Bux55YOc3gH%2BPI0s6QXb9fyw%2Fgt%2BxcKkaQgIfP0q%2B7MTYobkMvvDQZ5%2BpXq%2B2osRkBb6%2Fwllmk%2BOe4Dcb3d%2F2QJ7AdI4xUmy9JKDAIX4X%2B%2BYd%2F9US0NWmdceYLINvdbFSP6RASEwI9EGNoweG5wwtyeezJnQdHyujXFLamHuKoO5LdZ8IAEAwjfAgM3gbCBrQ%3D%3D","storageSource":{"bucket":"gcf-v2-uploads-477069411521-europe-west1","object":"73a43129-06e9-43ec-a40e-e515ffa8353e.zip"}}
+[debug] [2023-04-04T11:26:57.756Z] >>> [apiv2][query] PUT https://storage.googleapis.com/gcf-v2-uploads-477069411521-europe-west1/73a43129-06e9-43ec-a40e-e515ffa8353e.zip GoogleAccessId=service-477069411521%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1680609412&Signature=W2Dyt95cge5IzDUNS6OVj0qrZGH7G5tp%2BR3JDYYkjaS%2BBuF5X6KJ7c3HSmXhEHNnnvWrFiGSj2WKQv2x85MvG9JyKE%2FSHqKgkR100o74TNLlD88QsFeIHjD9teqY4C1Yq4u%2FGBecN27Nb65BQoUnC%2Bux55YOc3gH%2BPI0s6QXb9fyw%2Fgt%2BxcKkaQgIfP0q%2B7MTYobkMvvDQZ5%2BpXq%2B2osRkBb6%2Fwllmk%2BOe4Dcb3d%2F2QJ7AdI4xUmy9JKDAIX4X%2B%2BYd%2F9US0NWmdceYLINvdbFSP6RASEwI9EGNoweG5wwtyeezJnQdHyujXFLamHuKoO5LdZ8IAEAwjfAgM3gbCBrQ%3D%3D
+[debug] [2023-04-04T11:26:57.756Z] >>> [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-477069411521-europe-west1/73a43129-06e9-43ec-a40e-e515ffa8353e.zip [stream]
+[debug] [2023-04-04T11:27:33.609Z] <<< [apiv2][status] PUT https://storage.googleapis.com/gcf-v2-uploads-477069411521-europe-west1/73a43129-06e9-43ec-a40e-e515ffa8353e.zip 200
+[debug] [2023-04-04T11:27:33.609Z] <<< [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-477069411521-europe-west1/73a43129-06e9-43ec-a40e-e515ffa8353e.zip [omitted]
+[info] +  functions: .firebase\chat-4f7ea\functions folder uploaded successfully 
+[info] i  hosting[chat-4f7ea]: beginning deploy... 
+[info] i  hosting[chat-4f7ea]: found 29 files in .firebase\chat-4f7ea\hosting 
+[debug] [2023-04-04T11:27:33.630Z] [hosting] uploading with 200 concurrency
+[debug] [2023-04-04T11:27:33.703Z] [hosting] hash cache [LmZpcmViYXNlXGNoYXQtNGY3ZWFcaG9zdGluZw] stored for 29 files
+[debug] [2023-04-04T11:27:33.703Z] [hosting][hash queue][FINAL] {"max":64,"min":5,"avg":51.206896551724135,"active":0,"complete":29,"success":29,"errored":0,"retried":0,"total":29,"elapsed":70}
+[debug] [2023-04-04T11:27:33.703Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/477069411521/sites/chat-4f7ea/versions/22a4a94e31dde3ad:populateFiles [none]
+[debug] [2023-04-04T11:27:33.703Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/477069411521/sites/chat-4f7ea/versions/22a4a94e31dde3ad:populateFiles {"files":{"/favicon.ico":"43127f4210c52bcd0f30f291f1ee296ab41ddd1566905dc27fe1129e0175c8f1","/next.svg":"dd6837ad10912a1f5820eb31ad506e500d83be91a8635fcfa59b04d06f671fdc","/thirteen.svg":"399b773f0a515eec351e7559a4d1cd83b32c1c812f2fbc32fe1ba4ba4c1f580c","/vercel.svg":"1c03fbc03ff9ecf3469972d378778b1aea296f8ab9cb540af9d42c7848f52888","/404.html":"0d33a6014f6a54646781629b373730051995b8a1d0009420f2425eaa77fc0bdd","/500.html":"fe1b44e3f863a074144c17c27d796179a6e40b4000dbd25e3462d45383c832c0","/index.html":"7b4e4b8bb13e6f39a2086eea1dbf7f7421a5ee4720583057719ac17c4b779d93","/_next/static/chunks/webpack-0b5d8249fb15f5f3.js":"b84cca489db96f87d4bc2bd8e0f62c422b6013be781d2d68fe34fdf5bbd31611","/_next/static/chunks/pages/chat-2dc61ef359042479.js":"e78157edd434566f44de9cbd9fc280a40ac5242544cf24b8eb8d92e4b6eff9a9","/_next/static/chunks/pages/index-15f244cf9b8052d0.js":"549b01c7b7e89e609a02410ff68fcf798e54b2cf2eb1c340f3457b38ab698813","/_next/static/chunks/pages/input-5af3fd907f01ab74.js":"771c311f4f14f7ef6778bf7e00a644a32f762f350f0bfa0f773167a598b349cb","/_next/static/chunks/pages/_app-5fbdfbcdfb555d2f.js":"77069df78e1bd114df6d3e5310fd1ae3535e1871c9bd42520e743acda76d6d84","/_next/static/chunks/pages/_error-54de1933a164a1ff.js":"544d995b1338ae1c6dfc6574c193fc07192e395739e80f5e37499c3749875b8a","/_next/static/css/09b0496f960a84b4.css":"5355377bdb2d0fbfe121ab20b43b41d5216b469f90b376ca63b86e3e45227d96","/_next/static/css/6218b75c4c1aec6d.css":"4bbb016ad64941f0cd6a281947bb1adf85d2f2bc1234171c7f32bb7ba63af483","/_next/static/media/b1db3e28af9ef94a-s.woff2":"a9589069016bb9c4669180398e574dc1d099b1b19353bae2512a956aacb92f50","/_next/static/media/ae9ae6716d4f8bf8-s.woff2":"444154b54e62d875beef733763cc6db8ca6e0751c3d61243f24b152476dffa13","/_next/static/sU9lBolVTa_dKCLCTng9M/_buildManifest.js":"34a10607269d33e580b7439ffddaa43e66ff254d4898c600f081bce13b4bfef2","/_next/static/sU9lBolVTa_dKCLCTng9M/_ssgManifest.js":"f73bbe5888d285cbab0ee19990a0d9db0b352fa3dfd30959d64a2bc66422d35c","/_next/static/chunks/498-f6094c33098a0a3b.js":"6d4f377483b1746c458153dd6a644185e74b2cf6598390751816fc6faef62a24","/_next/static/media/b967158bc7d7a9fb-s.woff2":"fd55fd4f464d99f6da7ab39feace0b3e59b4da6acf199e63185aa75cbdf70719","/_next/static/media/2aaf0723e720e8b9-s.p.woff2":"344e115cd48b202947c9209994dfdaa1b416a68f15e991e9612a8436d8fd738f","/_next/static/media/c0f5ec5bbf5913b7-s.woff2":"eafae47139e0d9821bdfd9ce7d9edd8c3d9f7af0390d9b2fc6353f9ba6b9f011","/_next/static/chunks/55-9541cbffe610d07e.js":"704213f808eaf2196b71ca6acd2c3adb28330d863e8232b75c0cfc14bf13df95","/_next/static/chunks/main-0ecb9ccfcb6c9b24.js":"2686a31fc15b91fd43a38590173bae633e929b66ffa9995a18fa3b201efcffc7","/_next/static/media/9c4f34569c9b36ca-s.woff2":"c9ae8dd6969c1396e5fc39f6adb169d5ff1c3b4b23460e8c3e7611668be8f3e5","/_next/static/media/d1d9458b69004127-s.woff2":"02aeb5a5598b157615426099ea0a51cbd3a091cb73f6edaa2a18795b522e628f","/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js":"94291e78be8a4f3b9af21c6dae21c20d76cadc33fe6b28d0ed6554e80060fb5c","/_next/static/chunks/framework-2c79e2a64abdb08b.js":"b6c2ebd921694edf45f77a2b778b116c9b6ed72aaf6b111071feb8e1fa4425fd"}}
+[debug] [2023-04-04T11:27:35.175Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/477069411521/sites/chat-4f7ea/versions/22a4a94e31dde3ad:populateFiles 200
+[debug] [2023-04-04T11:27:35.175Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/477069411521/sites/chat-4f7ea/versions/22a4a94e31dde3ad:populateFiles {"uploadRequiredHashes":["7b4e4b8bb13e6f39a2086eea1dbf7f7421a5ee4720583057719ac17c4b779d93","fe1b44e3f863a074144c17c27d796179a6e40b4000dbd25e3462d45383c832c0","0d33a6014f6a54646781629b373730051995b8a1d0009420f2425eaa77fc0bdd"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/chat-4f7ea/versions/22a4a94e31dde3ad/files"}
+[debug] [2023-04-04T11:27:35.176Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/chat-4f7ea/versions/22a4a94e31dde3ad/files/7b4e4b8bb13e6f39a2086eea1dbf7f7421a5ee4720583057719ac17c4b779d93 [none]
+[debug] [2023-04-04T11:27:35.176Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/chat-4f7ea/versions/22a4a94e31dde3ad/files/7b4e4b8bb13e6f39a2086eea1dbf7f7421a5ee4720583057719ac17c4b779d93 [stream]
+[debug] [2023-04-04T11:27:35.177Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/chat-4f7ea/versions/22a4a94e31dde3ad/files/fe1b44e3f863a074144c17c27d796179a6e40b4000dbd25e3462d45383c832c0 [none]
+[debug] [2023-04-04T11:27:35.177Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/chat-4f7ea/versions/22a4a94e31dde3ad/files/fe1b44e3f863a074144c17c27d796179a6e40b4000dbd25e3462d45383c832c0 [stream]
+[debug] [2023-04-04T11:27:35.177Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/chat-4f7ea/versions/22a4a94e31dde3ad/files/0d33a6014f6a54646781629b373730051995b8a1d0009420f2425eaa77fc0bdd [none]
+[debug] [2023-04-04T11:27:35.178Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/chat-4f7ea/versions/22a4a94e31dde3ad/files/0d33a6014f6a54646781629b373730051995b8a1d0009420f2425eaa77fc0bdd [stream]
+[debug] [2023-04-04T11:27:35.178Z] [hosting][populate queue][FINAL] {"max":1475,"min":1475,"avg":1475,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1477}
+[debug] [2023-04-04T11:27:35.178Z] [hosting] uploads queued: 3
+[debug] [2023-04-04T11:27:36.479Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/chat-4f7ea/versions/22a4a94e31dde3ad/files/fe1b44e3f863a074144c17c27d796179a6e40b4000dbd25e3462d45383c832c0 200
+[debug] [2023-04-04T11:27:36.479Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/chat-4f7ea/versions/22a4a94e31dde3ad/files/fe1b44e3f863a074144c17c27d796179a6e40b4000dbd25e3462d45383c832c0 [stream]
+[debug] [2023-04-04T11:27:36.499Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/chat-4f7ea/versions/22a4a94e31dde3ad/files/0d33a6014f6a54646781629b373730051995b8a1d0009420f2425eaa77fc0bdd 200
+[debug] [2023-04-04T11:27:36.499Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/chat-4f7ea/versions/22a4a94e31dde3ad/files/0d33a6014f6a54646781629b373730051995b8a1d0009420f2425eaa77fc0bdd [stream]
+[debug] [2023-04-04T11:27:36.572Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/chat-4f7ea/versions/22a4a94e31dde3ad/files/7b4e4b8bb13e6f39a2086eea1dbf7f7421a5ee4720583057719ac17c4b779d93 200
+[debug] [2023-04-04T11:27:36.573Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/chat-4f7ea/versions/22a4a94e31dde3ad/files/7b4e4b8bb13e6f39a2086eea1dbf7f7421a5ee4720583057719ac17c4b779d93 [stream]
+[debug] [2023-04-04T11:27:36.573Z] [hosting][upload queue][FINAL] {"max":1398,"min":1303,"avg":1341.3333333333333,"active":0,"complete":3,"success":3,"errored":0,"retried":0,"total":3,"elapsed":1398}
+[info] +  hosting[chat-4f7ea]: file upload complete 
+[debug] [2023-04-04T11:27:36.574Z] [hosting] deploy completed after 2963ms
+[info] i  functions: creating Node.js 16 function firebase-frameworks-chat-4f7ea:ssrchat4f7ea(europe-west1)... 
+[debug] [2023-04-04T11:27:36.579Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/chat-4f7ea/locations/europe-west1/functions functionId=ssrchat4f7ea
+[debug] [2023-04-04T11:27:36.579Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/chat-4f7ea/locations/europe-west1/functions {"name":"projects/chat-4f7ea/locations/europe-west1/functions/ssrchat4f7ea","buildConfig":{"runtime":"nodejs16","entryPoint":"ssrchat4f7ea","source":{"storageSource":{"bucket":"gcf-v2-uploads-477069411521-europe-west1","object":"73a43129-06e9-43ec-a40e-e515ffa8353e.zip"}},"environmentVariables":{}},"serviceConfig":{"environmentVariables":{"__FIREBASE_FRAMEWORKS_ENTRY__":"next.js","__FIREBASE_DEFAULTS__":"{\"config\":{\"projectId\":\"chat-4f7ea\",\"appId\":\"1:477069411521:web:cebab7edcfd12d51064040\",\"storageBucket\":\"chat-4f7ea.appspot.com\",\"apiKey\":\"AIzaSyBPh4jflxFyc1i0f14YmsYpd9rL_GQNFtU\",\"authDomain\":\"chat-4f7ea.firebaseapp.com\",\"messagingSenderId\":\"477069411521\",\"measurementId\":\"G-T2P1HF2HXR\"},\"_authTokenSyncURL\":\"/__session\"}","FIREBASE_CONFIG":"{\"projectId\":\"chat-4f7ea\",\"storageBucket\":\"chat-4f7ea.appspot.com\"}","GCLOUD_PROJECT":"chat-4f7ea","EVENTARC_CLOUD_EVENT_SOURCE":"projects/chat-4f7ea/locations/europe-west1/services/ssrchat4f7ea"},"availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-codebase":"firebase-frameworks-chat-4f7ea","firebase-functions-hash":"1b1288f577a1b6467f59852227bd85e42222f5f7"}}
+[debug] [2023-04-04T11:27:37.310Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/chat-4f7ea/locations/europe-west1/functions 400
+[debug] [2023-04-04T11:27:37.310Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/chat-4f7ea/locations/europe-west1/functions {"error":{"code":400,"message":"Could not create Cloud Run service ssrchat4f7ea. spec.template.spec.containers.resources.limits.cpu: Invalid value specified for cpu. For the specified value, maxScale may not exceed 10.\nConsider running your workload in a region with greater capacity, decreasing your requested cpu-per-instance, or requesting an increase in quota for this region if you are seeing sustained usage near this limit, see https://cloud.google.com/run/quotas. Your project may gain access to further scaling by adding billing information to your account.","status":"INVALID_ARGUMENT"}}
+[warn] !  functions: HTTP Error: 400, Could not create Cloud Run service ssrchat4f7ea. spec.template.spec.containers.resources.limits.cpu: Invalid value specified for cpu. For the specified value, maxScale may not exceed 10.
+Consider running your workload in a region with greater capacity, decreasing your requested cpu-per-instance, or requesting an increase in quota for this region if you are seeing sustained usage near this limit, see https://cloud.google.com/run/quotas. Your project may gain access to further scaling by adding billing information to your account. 
+[warn] !  functions: failed to create function projects/chat-4f7ea/locations/europe-west1/functions/ssrchat4f7ea 
+[error] Failed to create function projects/chat-4f7ea/locations/europe-west1/functions/ssrchat4f7ea
+[debug] [2023-04-04T11:27:37.315Z] Total Function Deployment time: 737
+[debug] [2023-04-04T11:27:37.315Z] 1 Functions Deployed
+[debug] [2023-04-04T11:27:37.315Z] 1 Functions Errored
+[debug] [2023-04-04T11:27:37.315Z] 0 Function Deployments Aborted
+[debug] [2023-04-04T11:27:37.315Z] Average Function Deployment time: 736
+[info] 
+[info] Functions deploy had errors with the following functions:
+	firebase-frameworks-chat-4f7ea:ssrchat4f7ea(europe-west1)
+[debug] [2023-04-04T11:27:37.317Z] Not printing URL for HTTPS function. Typically this means it didn't match a filter or we failed deployment
+[info] i  functions: cleaning up build files... 
+[debug] [2023-04-04T11:27:37.319Z] >>> [apiv2][query] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/chat-4f7ea/locations/europe-west1/repositories/gcf-artifacts/packages/ssrchat4f7ea [none]
+[debug] [2023-04-04T11:27:37.320Z] >>> [apiv2][query] GET https://eu.gcr.io/v2/chat-4f7ea/gcf/europe-west1/tags/list [none]
+[debug] [2023-04-04T11:27:37.659Z] <<< [apiv2][status] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/chat-4f7ea/locations/europe-west1/repositories/gcf-artifacts/packages/ssrchat4f7ea 404
+[debug] [2023-04-04T11:27:37.659Z] <<< [apiv2][body] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/chat-4f7ea/locations/europe-west1/repositories/gcf-artifacts/packages/ssrchat4f7ea {"error":{"code":404,"message":"Package \"projects/chat-4f7ea/locations/europe-west1/repositories/gcf-artifacts/packages/ssrchat4f7ea\" was not found.","status":"NOT_FOUND"}}
+[debug] [2023-04-04T11:27:37.691Z] <<< [apiv2][status] GET https://eu.gcr.io/v2/chat-4f7ea/gcf/europe-west1/tags/list 200
+[debug] [2023-04-04T11:27:37.691Z] <<< [apiv2][body] GET https://eu.gcr.io/v2/chat-4f7ea/gcf/europe-west1/tags/list {"child":[],"manifest":{},"name":"chat-4f7ea/gcf/europe-west1","tags":[]}
+[debug] [2023-04-04T11:27:37.691Z] Could not find image for function projects/chat-4f7ea/locations/europe-west1/functions/ssrchat4f7ea
+[debug] [2023-04-04T11:27:37.691Z] Functions deploy failed.
+[debug] [2023-04-04T11:27:37.691Z] {
+  "endpoint": {
+    "id": "ssrchat4f7ea",
+    "project": "chat-4f7ea",
+    "region": "europe-west1",
+    "entryPoint": "ssrchat4f7ea",
+    "platform": "gcfv2",
+    "runtime": "nodejs16",
+    "httpsTrigger": {},
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    },
+    "environmentVariables": {
+      "__FIREBASE_FRAMEWORKS_ENTRY__": "next.js",
+      "__FIREBASE_DEFAULTS__": "{\"config\":{\"projectId\":\"chat-4f7ea\",\"appId\":\"1:477069411521:web:cebab7edcfd12d51064040\",\"storageBucket\":\"chat-4f7ea.appspot.com\",\"apiKey\":\"AIzaSyBPh4jflxFyc1i0f14YmsYpd9rL_GQNFtU\",\"authDomain\":\"chat-4f7ea.firebaseapp.com\",\"messagingSenderId\":\"477069411521\",\"measurementId\":\"G-T2P1HF2HXR\"},\"_authTokenSyncURL\":\"/__session\"}",
+      "FIREBASE_CONFIG": "{\"projectId\":\"chat-4f7ea\",\"storageBucket\":\"chat-4f7ea.appspot.com\"}",
+      "GCLOUD_PROJECT": "chat-4f7ea",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/chat-4f7ea/locations/europe-west1/services/ssrchat4f7ea"
+    },
+    "codebase": "firebase-frameworks-chat-4f7ea",
+    "cpu": 1,
+    "concurrency": 80,
+    "targetedByOnly": false,
+    "hash": "1b1288f577a1b6467f59852227bd85e42222f5f7"
+  },
+  "op": "create",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "context": {
+      "function": "projects/chat-4f7ea/locations/europe-west1/functions/ssrchat4f7ea"
+    },
+    "exit": 1,
+    "message": "Failed to create function projects/chat-4f7ea/locations/europe-west1/functions/ssrchat4f7ea",
+    "original": {
+      "name": "FirebaseError",
+      "children": [],
+      "context": {
+        "body": {
+          "error": {
+            "code": 400,
+            "message": "Could not create Cloud Run service ssrchat4f7ea. spec.template.spec.containers.resources.limits.cpu: Invalid value specified for cpu. For the specified value, maxScale may not exceed 10.\nConsider running your workload in a region with greater capacity, decreasing your requested cpu-per-instance, or requesting an increase in quota for this region if you are seeing sustained usage near this limit, see https://cloud.google.com/run/quotas. Your project may gain access to further scaling by adding billing information to your account.",
+            "status": "INVALID_ARGUMENT"
+          }
+        },
+        "response": {
+          "statusCode": 400
+        }
+      },
+      "exit": 1,
+      "message": "HTTP Error: 400, Could not create Cloud Run service ssrchat4f7ea. spec.template.spec.containers.resources.limits.cpu: Invalid value specified for cpu. For the specified value, maxScale may not exceed 10.\nConsider running your workload in a region with greater capacity, decreasing your requested cpu-per-instance, or requesting an increase in quota for this region if you are seeing sustained usage near this limit, see https://cloud.google.com/run/quotas. Your project may gain access to further scaling by adding billing information to your account.",
+      "status": 400
+    },
+    "status": 400
+  }
+}
+[debug] [2023-04-04T11:27:37.692Z] Error: Failed to create function ssrchat4f7ea in region europe-west1
+    at C:\Users\Home\.cache\firebase\tools\lib\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:48:11
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Fabricator.createV2Function (C:\Users\Home\.cache\firebase\tools\lib\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:271:32)
+    at async Fabricator.createEndpoint (C:\Users\Home\.cache\firebase\tools\lib\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:132:13)
+    at async handle (C:\Users\Home\.cache\firebase\tools\lib\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:85:17)
+[error] 
+[error] Error: There was an error deploying functions

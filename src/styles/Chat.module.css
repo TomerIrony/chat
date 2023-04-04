@@ -1,0 +1,25 @@
+.main {
+  width: 1100px;
+  background-color: #797171;
+  border-radius: 10px;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.message_row{
+ display: flex;
+ flex-direction: column;
+ padding: 1.5rem;
+ border-bottom: 1px solid black;
+}
+
+.message_author{
+  font-size:larger;
+
+}
+
+.message_text{
+ 
+}
+
